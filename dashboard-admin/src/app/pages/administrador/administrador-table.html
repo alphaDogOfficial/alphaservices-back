@@ -1,0 +1,48 @@
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Administradores</h5>
+    </div>
+    <div class="ibox-content">
+        <div class="row">
+            <div class="col-sm-3" style="float: right;">
+                <div class="input-group"><input type="text" placeholder="CPF" class="input-sm form-control"> <span class="input-group-btn" ng-model="vm.adminCPF">
+                    <button type="button" class="btn btn-sm btn-primary" ng-click="vm.searchAdminByCPF()">Pesquisar</button> </span></div>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+
+                    <th>CPF</th>
+                    <th>Nome</th>
+                    <th>Login</th>
+                    <th>E-mail</th>
+                    <th>Opções</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="admin in vm.administradores">
+                        <td>{{admin.cpf}}</td>
+                        <td>{{admin.nome}}</td>
+                        <td>{{admin.login}}</td>
+                        <td>{{admin.email}}</td>
+                        <td>
+                          <a ng-click="vm.delete(admin.cpf)">
+                            <i class="fa fa-times" aria-hidden="true" />
+                          </a>
+                          &nbsp;&nbsp;
+                          <a ui-sref='usuario.administrador-update({cpf: admin.cpf})'>
+                            <i class="fa fa-pencil" aria-hidden="true" />
+                          </a>
+                        </td>
+                        </tr>
+                </tbody>
+            </table>
+            <div class="hr-line-dashed"></div>
+            <div style="float: right;">
+                <button class="btn btn-white" type="submit" ng-click="vm.goToAddAdmin()">Criar</button>
+            </div>
+        </div>
+    </div>
+</div>

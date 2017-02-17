@@ -1,0 +1,45 @@
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Entregas</h5>
+    </div>
+    <div class="ibox-content">
+        <div class="row">
+            <div class="col-sm-3" style="float: right;">
+                <div class="input-group"><input type="text" placeholder="idEntrega" class="input-sm form-control"> <span class="input-group-btn">
+                    <button type="button" class="btn btn-sm btn-primary">Pesquisar</button> </span></div>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+
+                    <th>ID</th>
+                    <th>IDCompra</th>
+                    <th>Prazo</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="entrega in vm.entregas">
+                        <td>{{entrega.identrega}}</td>
+                        <td>{{entrega.idcompra}}</td>
+                        <td>{{entrega.prazo}}</td>
+                        <td>
+                          <a ng-click="vm.delete(entrega.identrega)">
+                            <i class="fa fa-times" aria-hidden="true" />
+                          </a>
+                          &nbsp;&nbsp;
+                          <a ui-sref='entrega.update({identrega: entrega.identrega})'>
+                            <i class="fa fa-pencil" aria-hidden="true" />
+                          </a>
+                        </td>
+                        </tr>
+                </tbody>
+            </table>
+            <!-- <div class="hr-line-dashed"></div>
+            <div style="float: right;">
+                <button class="btn btn-primary" type="submit" ng-click="vm.goToAddProduct()">Criar</button>
+            </div> -->
+        </div>
+    </div>
+</div>

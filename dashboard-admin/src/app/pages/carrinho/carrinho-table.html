@@ -1,0 +1,26 @@
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Carrinho</h5>
+    </div>
+    <div class="ibox-content">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>CPF do cliente</th>
+                    <th>ID do produto</th>
+                    <th>Quantidade</th>
+                    <th>Data</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in vm.carrinho">
+                        <td>{{item.cpf_cliente}}</td>
+                        <td>{{item.id_produto}}</td>
+                        <td>{{item.quantidade}}</td>
+                        <td>{{item.data}}</td>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Clientes</h5>
+    </div>
+    <div class="ibox-content">
+        <div class="row">
+            <div class="col-sm-3" style="float: right;">
+                <div class="input-group"><input type="text" placeholder="CPF" class="input-sm form-control"> <span class="input-group-btn">
+                    <button type="button" class="btn btn-sm btn-primary">Pesquisar</button> </span></div>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+
+                    <th>CPF</th>
+                    <th>Nome</th>
+                    <th>Login</th>
+                    <th>Telefone</th>
+                    <th>E-mail</th>
+                    <th>Opções</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="client in vm.clientes">
+                        <td>{{client.cpf}}</td>
+                        <td>{{client.nome}}</td>
+                        <td>{{client.login}}</td>
+                        <td>{{client.telefone}}</td>
+                        <td>{{client.email}}</td>
+                        <td><a ng-click="vm.delete(client.cpf)"><i class="fa fa-times" aria-hidden="true" /></a>&nbsp;&nbsp;<a ui-sref='usuario.cliente-update({cpf: client.cpf})'><i class="fa fa-pencil" aria-hidden="true" /></a></td>
+                        </tr>
+                </tbody>
+            </table>
+            <div class="hr-line-dashed"></div>
+            <div style="float: right;">
+                <button class="btn btn-primary" type="submit" ng-click="vm.goToAddClient()">Criar</button>
+            </div>
+        </div>
+    </div>
+</div>

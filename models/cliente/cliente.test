@@ -1,0 +1,11 @@
+createdb tradesportsdb;
+
+# to test the POST Method
+
+curl --data "nome=teste&login=testelogin&senha=testesenha&telefone=1234567890&email=teste@teste.com&cpf=12345678900" http://127.0.0.1:3000/cliente
+
+# to test the UPDATE method
+curl -X PUT --data "nome=testeU&login=testeloginU&senha=testesenhaU&telefone=1234567891&email=testeU@teste.com&cpf=12345678901" http://127.0.0.1:3000/cliente/1
+
+# to test the DELETE method
+curl -X DELETE http://127.0.0.1:3000/cliente/1

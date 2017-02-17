@@ -1,0 +1,11 @@
+createdb tradesportsdb;
+
+# to test the POST Method
+
+curl --data "valor=9999&nome=teste&imagem=teste&descricao=teste&peso=999&tamanho=teste&fabricante=teste&quantidade=999&tipo=teste" http://127.0.0.1:3000/produto
+
+# to test the UPDATE method
+curl -X PUT --data "valor=8888&nome=teste&imagem=testeUpated&descricao=testeUpated&peso=888&tamanho=testeUpated&fabricante=testeUpated&quantidade=888&tipo=testeUpated" http://127.0.0.1:3000/produto/1
+
+# to test the DELETE method
+curl -X DELETE http://127.0.0.1:3000/produto/1

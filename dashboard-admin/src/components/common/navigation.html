@@ -1,0 +1,68 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul side-navigation class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+
+                <div class="dropdown profile-element" dropdown>
+                    <a class="dropdown-toggle" dropdown-toggle href>
+                            <span class="clear">
+                                <span class="block m-t-xs">
+                                    <strong class="font-bold">Saulo</strong>
+                             </span>
+                                <span class="text-muted text-xs block">Example menu<b class="caret"></b></span>
+                            </span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                        <li><a href="">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="logo-element">
+                    IN+
+                </div>
+
+            </li>
+
+            <li ng-class="{active: $state.includes('produto')}">
+                <a><i class="fa fa-dashboard"></i> <span class="nav-label">Produto</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li ui-sref-active="active"><a ui-sref="produto.table"> <i class="fa fa-table"></i> Table </a></li>
+                    <li ui-sref-active="active"><a ui-sref="produto.add"> <i class="fa fa-plus"></i> Add </a></li>
+
+                </ul>
+            </li>
+
+            <li ng-class="{active: $state.includes('promocoes')}">
+                <a><i class="fa fa-dashboard"></i> <span class="nav-label">Promoções</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li ui-sref-active="active"><a ui-sref="promocoes.table"> <i class="fa fa-table"></i> Table </a></li>
+                </ul>
+            </li>
+
+            <li ng-class="{active: $state.includes('usuario')}">
+                <a><i class="fa fa-users"></i> <span class="nav-label">Usuários</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li ui-sref-active="active"><a ui-sref="usuario.cliente"> <i class="fa fa-user-plus"></i> Cliente </a></li>
+                    <li ui-sref-active="active"><a ui-sref="usuario.funcionario"> <i class="fa fa-user-plus"></i> Funcionario </a></li>
+                    <li ui-sref-active="active"><a ui-sref="usuario.administrador"> <i class="fa fa-user-plus"></i> Admin </a></li>
+                </ul>
+            </li>
+
+            <li ng-class="{active: $state.includes('entrega')}">
+                <a><i class="fa fa-dashboard"></i> <span class="nav-label">Entregas</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li ui-sref-active="active"><a ui-sref="entrega.table"> <i class="fa fa-table"></i> Table </a></li>
+                </ul>
+            </li>
+
+            <li ng-class="{active: $state.includes('compras')}">
+                <a><i class="fa fa-dashboard"></i> <span class="nav-label">Compras</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li ui-sref-active="active"><a ui-sref="compras.table"> <i class="fa fa-table"></i> Table </a></li>                    
+                </ul>
+            </li>
+
+
+        </ul>
+
+    </div>
+</nav>
